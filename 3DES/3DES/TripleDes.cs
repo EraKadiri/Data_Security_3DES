@@ -7,7 +7,8 @@ namespace _3DES
 
         public static string Encrypt(string TextToEncrypt)
         {
-            //TODO: implement method
+            string encryptedText = "";
+            return encryptedText;
         }
 
         public static string Decrypt(string TextToDecrypt)
