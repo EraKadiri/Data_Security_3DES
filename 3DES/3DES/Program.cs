@@ -38,7 +38,7 @@ namespace TripleDES
                 continueInput = Console.ReadLine();
 
             }
-            
+
         }
 
         public static void EncryptDecrypt(string input)
@@ -48,8 +48,8 @@ namespace TripleDES
                 Console.WriteLine("Enter text to encrypt and decrypt: ");
                 string plainText = Console.ReadLine();
 
-                string encryptedText = ClsTripleDes.Encrypt(plainText);
-                string decryptedText = ClsTripleDes.Decrypt(encryptedText);
+                string encryptedText = TripleDes.Encrypt(plainText);
+                string decryptedText = TripleDes.Decrypt(encryptedText);
 
                 Console.WriteLine("Before Encryption Text = " + plainText + "\n");
                 Console.WriteLine("After Encryption Text = " +
@@ -65,51 +65,17 @@ namespace TripleDES
                 string path = System.IO.Path.Combine(workingDirectory, "plaintext.txt");
                 string readText = File.ReadAllText(path);
 
-                string encryptedText = ClsTripleDes.Encrypt(readText);
-                string decryptedText = ClsTripleDes.Decrypt(encryptedText);
+                string encryptedText = TripleDes.Encrypt(readText);
+                string decryptedText = TripleDes.Decrypt(encryptedText);
 
                 Console.WriteLine("Before Encryption Text = " + readText + "\n");
                 Console.WriteLine("After Encryption Text = " +
                    encryptedText + "\n");
                 Console.WriteLine("After Decryption Text = " +
                    decryptedText + "\n");
-         
+
             }
         }
     }
+
 }
- public static void EncryptDecrypt(string input)
-        {
-            if (input == "text")
-            {
-                Console.WriteLine("Enter text to encrypt and decrypt: ");
-                string plainText = Console.ReadLine();
-
-                string encryptedText = ClsTripleDes.Encrypt(plainText);
-                string decryptedText = ClsTripleDes.Decrypt(encryptedText);
-
-                Console.WriteLine("Before Encryption Text = " + plainText + "\n");
-                Console.WriteLine("After Encryption Text = " +
-                   encryptedText + "\n");
-                Console.WriteLine("After Decryption Text = " +
-                   decryptedText + "\n");
-
-            }
-            else if (input == "file")
-            {
-
-                string workingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                string path = System.IO.Path.Combine(workingDirectory, "plaintext.txt");
-                string readText = File.ReadAllText(path);
-
-                string encryptedText = ClsTripleDes.Encrypt(readText);
-                string decryptedText = ClsTripleDes.Decrypt(encryptedText);
-
-                Console.WriteLine("Before Encryption Text = " + readText + "\n");
-                Console.WriteLine("After Encryption Text = " +
-                   encryptedText + "\n");
-                Console.WriteLine("After Decryption Text = " +
-                   decryptedText + "\n");
-         
-            }
-        }

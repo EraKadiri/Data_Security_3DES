@@ -49,7 +49,7 @@ namespace _3DES
                MD5CryptoServiceProvider();
 
             byte[] MysecurityKeyArray = MyMD5CryptoService.ComputeHash
-               (UTF8Encoding.UTF8.GetBytes(mysecurityKey));
+               (UTF8Encoding.UTF8.GetBytes(securityKey));
 
             MyMD5CryptoService.Clear();
 
