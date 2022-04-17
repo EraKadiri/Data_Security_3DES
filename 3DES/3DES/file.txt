@@ -1,0 +1,1 @@
+﻿In 1978, a triple encryption method using DES with two 56-bit keys was proposed by Walter Tuchman; in 1981 Merkle and Hellman proposed a more secure triple key version of 3DES with 112 bits of security.

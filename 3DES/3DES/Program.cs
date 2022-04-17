@@ -62,7 +62,7 @@ namespace TripleDES
             {
 
                 string workingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                string path = System.IO.Path.Combine(workingDirectory, "plaintext.txt");
+                string path = System.IO.Path.Combine(workingDirectory, "file.txt");
                 string readText = File.ReadAllText(path);
 
                 string encryptedText = TripleDes.Encrypt(readText);
