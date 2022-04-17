@@ -57,4 +57,22 @@ namespace _3DES
                 Console.WriteLine("After Decryption Text = " +
                    decryptedText + "\n");
 
-            
+            }
+            else if (input == "file")
+            {
+
+                string workingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string path = System.IO.Path.Combine(workingDirectory, "plaintext.txt");
+                string readText = File.ReadAllText(path);
+
+                string encryptedText = ClsTripleDes.Encrypt(readText);
+                string decryptedText = ClsTripleDes.Decrypt(encryptedText);
+
+                Console.WriteLine("Before Encryption Text = " + readText + "\n");
+                Console.WriteLine("After Encryption Text = " +
+                   encryptedText + "\n");
+                Console.WriteLine("After Decryption Text = " +
+                   decryptedText + "\n");
+         
+            }
+        }
