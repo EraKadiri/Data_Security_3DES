@@ -41,3 +41,5 @@ namespace _3DES
         }
     }
 }
+ public static void EncryptDecrypt(string input)
+        {
