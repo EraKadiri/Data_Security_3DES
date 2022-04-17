@@ -43,3 +43,18 @@ namespace _3DES
 }
  public static void EncryptDecrypt(string input)
         {
+            if (input == "text")
+            {
+                Console.WriteLine("Enter text to encrypt and decrypt: ");
+                string plainText = Console.ReadLine();
+
+                string encryptedText = ClsTripleDes.Encrypt(plainText);
+                string decryptedText = ClsTripleDes.Decrypt(encryptedText);
+
+                Console.WriteLine("Before Encryption Text = " + plainText + "\n");
+                Console.WriteLine("After Encryption Text = " +
+                   encryptedText + "\n");
+                Console.WriteLine("After Decryption Text = " +
+                   decryptedText + "\n");
+
+            
